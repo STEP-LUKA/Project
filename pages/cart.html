@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie - Cart & Profile</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* სქროლის ეფექტი პროფილით გადასვლისას */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="../index.html" class="logo">Foodie</a>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="menu.html">Menu</a>
+      </nav>
+    </div>
+    <div class="nav-right" id="nav-auth-area">
+      <button type="button" class="cart-btn" aria-label="Shopping Cart">
+        🛒 <span id="cart-badge" class="cart-badge" style="display:none;">0</span>
+      </button>
+      <a href="login.html" id="nav-login-link">Login</a>
+      <a href="register.html" class="btn-orange" id="nav-signup-link">Sign Up</a>
+    </div>
+  </header>
+
+  <main class="section-container">
+    <div class="cart-profile-grid">
+      <section class="cart-box">
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items-container"></div>
+        <div class="cart-summary" id="cart-summary-box">
+          <div class="cart-total-row">
+            <span>Total:</span>
+            <strong id="cart-total-price">$0.00</strong>
+          </div>
+          <button type="button" class="btn-orange full-btn" id="checkout-btn">Checkout Order</button>
+        </div>
+      </section>
+
+      <section class="profile-box">
+        <h2 id="profile-section">User Profile</h2>
+        <form id="profile-form">
+          <div class="name-grid">
+            <div class="form-group">
+              <label for="prof-firstname">First Name</label>
+              <input type="text" id="prof-firstname" />
+            </div>
+            <div class="form-group">
+              <label for="prof-lastname">Last Name</label>
+              <input type="text" id="prof-lastname" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="prof-email">Email</label>
+            <input type="email" id="prof-email" />
+          </div>
+          <div class="form-group">
+            <label for="prof-phone">Phone Number</label>
+            <input type="tel" id="prof-phone" placeholder="+995 555 00 00 00" />
+          </div>
+          <div class="form-group">
+            <label for="prof-address">Address</label>
+            <input type="text" id="prof-address" placeholder="123 Delivery Street" />
+          </div>
+          <div class="form-group">
+            <label for="prof-age">Age</label>
+            <input type="number" id="prof-age" placeholder="22" />
+          </div>
+          <button type="submit" class="btn-orange full-btn">Save Profile</button>
+        </form>
+
+        <hr style="margin: 24px 0; border: none; border-top: 1px solid #eee;" />
+
+        <h3>Change Password</h3>
+        <form id="change-pass-form" style="margin-top: 12px;">
+          <div class="form-group">
+            <label for="old-password">Old Password</label>
+            <input type="password" id="old-password" required />
+          </div>
+          <div class="form-group">
+            <label for="new-password">New Password</label>
+            <input type="password" id="new-password" required />
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm New Password</label>
+            <input type="password" id="confirm-password" required />
+          </div>
+          <button type="submit" class="btn-clear" style="margin-bottom: 12px;">Update Password</button>
+        </form>
+
+        <div style="display:flex; gap:10px;">
+          <button type="button" class="btn-clear" id="logout-btn">Log Out</button>
+          <button type="button" class="btn-clear" id="delete-account-btn" style="color:#d93025; border-color:#f5c2c0;">Delete Account</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="copyright">
+      <strong>Created by:</strong> <a href="https://stepacademy.ge" target="_blank" rel="noopener">IT Academy STEP Georgia</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/pages/cart.js"></script>
+  <!-- მეორე, კონფლიქტური სკრიპტი სამუდამოდ ამოღებულია -->
+</body>
+</html>

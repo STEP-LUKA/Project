@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie - Create Account</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="../index.html" class="logo">Foodie</a>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="menu.html">Menu</a>
+      </nav>
+    </div>
+    <div class="nav-right" id="nav-auth-area">
+      <button type="button" class="cart-btn" aria-label="Shopping Cart">🛒</button>
+      <a href="login.html" id="nav-login-link">Login</a>
+      <a href="register.html" class="btn-orange" id="nav-signup-link">Sign Up</a>
+    </div>
+  </header>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <h2>Create Account</h2>
+      <p class="subtitle">Join Foodie for fast, delicious delivery</p>
+
+      <form id="register-form">
+        <div class="name-grid">
+          <div class="form-group">
+            <label for="reg-firstname">First Name</label>
+            <input type="text" id="reg-firstname" placeholder="Luka" required />
+          </div>
+          <div class="form-group">
+            <label for="reg-lastname">Last Name</label>
+            <input type="text" id="reg-lastname" placeholder="Lobzhanidze" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="reg-password">Password</label>
+          <div class="pass-wrapper">
+            <input type="password" id="reg-password" placeholder="••••••••" required />
+            <button type="button" class="eye-btn" data-target="reg-password" aria-label="Toggle password">👁</button>
+          </div>
+          <ul class="pass-rules">
+            <li>• At least 8 characters, 1 uppercase, 1 lowercase, and 1 number</li>
+          </ul>
+        </div>
+
+        <button type="submit" class="btn-orange full-btn">Create Account</button>
+      </form>
+
+      <div class="auth-footer">
+        Already have an account? <a href="login.html">Sign in</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="verify-modal" style="display:none;">
+    <div class="modal-box">
+      <h3>Verify Your Email</h3>
+      <p>We sent a verification code to your email address. Enter it below to activate your account.</p>
+      <div class="form-group">
+        <label for="verify-code-input">Verification Code</label>
+        <input type="text" id="verify-code-input" placeholder="Enter code" />
+      </div>
+      <div style="display:flex; gap:10px;">
+        <button type="button" class="btn-orange full-btn" id="verify-submit-btn">Verify Email</button>
+        <button type="button" class="btn-clear" id="verify-cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../js/pages/auth.js"></script>
+</body>
+</html>

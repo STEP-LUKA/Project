@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie - Dish Details</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="../index.html" class="logo">Foodie</a>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="menu.html">Menu</a>
+      </nav>
+    </div>
+    <div class="nav-right" id="nav-auth-area">
+      <button type="button" class="cart-btn" aria-label="Shopping Cart">
+        🛒 <span id="cart-badge" class="cart-badge" style="display:none;">0</span>
+      </button>
+      <a href="login.html" id="nav-login-link">Login</a>
+      <a href="register.html" class="btn-orange" id="nav-signup-link">Sign Up</a>
+    </div>
+  </header>
+
+  <main class="section-container">
+    <div id="product-details-container"></div>
+
+    <section class="related-section">
+      <h2 class="related-title">You May Also Like</h2>
+      <div class="menu-grid" id="related-products-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="copyright">
+      <strong>Created by:</strong> <a href="https://stepacademy.ge" target="_blank" rel="noopener">IT Academy STEP Georgia</a>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/pages/product.js"></script>
+</body>
+</html>
